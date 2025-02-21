@@ -19,6 +19,7 @@ AQI-ETL is an **Extract, Transform, and Load (ETL) pipeline** designed to collec
 After processing, the data is **visualized** using **Business Intelligence (BI) tools**, allowing for better analysis and decision-making.
 
 ## Tech Stack
+- Data Storage: Microsoft SQL Server
 - ETL: SSIS
 - OLAP: SSAS
 - Mining: Python
