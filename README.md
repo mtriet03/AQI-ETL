@@ -17,3 +17,9 @@ Each member contributed to different aspects of the **ETL pipeline, data process
 AQI-ETL is an **Extract, Transform, and Load (ETL) pipeline** designed to collect, process, and store **Air Quality Index (AQI) data** from **Excel files**.  
 
 After processing, the data is **visualized** using **Business Intelligence (BI) tools**, allowing for better analysis and decision-making.
+
+## Tech Stack
+- ETL: SSIS
+- OLAP: SSAS
+- Mining: Python
+- Visualization: PowerBI
