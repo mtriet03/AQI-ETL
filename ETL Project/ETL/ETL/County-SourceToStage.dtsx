@@ -1,0 +1,1139 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/1/2024 8:18:32 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSI"
+  DTS:CreatorName="MSI\Admin"
+  DTS:DTSID="{1D8CA2CD-30E6-4ACE-A7B0-E4D62C79A9EC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{C9C839EA-A2A6-4589-B902-3A1CB39C6367}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[US COUNTY]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{350FE71E-CB30-4A28-95CA-65B1DBFF727A}"
+      DTS:ObjectName="US COUNTY">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Admin\Desktop\BI\Đồ án\Air_Quality_Data\(2B)uscounties.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county"
+              DTS:DTSID="{D2F10E30-353A-40AA-B8D8-D4D76EF46119}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county_ascii"
+              DTS:DTSID="{382E476C-F7FE-4771-A819-7219042C402B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county_full"
+              DTS:DTSID="{AD8522C8-1707-43F3-BBB9-6A654C780E84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county_fips"
+              DTS:DTSID="{8DD7FF02-E9B4-4013-82EA-232DF67FC19C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state_id"
+              DTS:DTSID="{1E13481D-9366-4695-A5AD-3AFBA33125FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state_name"
+              DTS:DTSID="{A805FD4F-9B7E-4497-9A1D-FACB1319A0A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="8"
+              DTS:DataScale="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lat"
+              DTS:DTSID="{B8E33EFC-22F4-43FC-8C3C-BE45ED75784C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="8"
+              DTS:DataScale="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lng"
+              DTS:DTSID="{66D9D107-8F64-4D05-9835-FE98F1B32205}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="population"
+              DTS:DTSID="{F3C23BB7-0B8E-4C0F-87BD-444A4522CC43}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{49ED1303-5846-4DA2-AB7D-0AEE6ED87E82}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CET">
+      <DTS:VariableValue
+        DTS:DataType="7">11/1/2024 9:41:51 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{703BEE5D-3F5E-47E5-8772-1D2BF05ED05B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSET">
+      <DTS:VariableValue
+        DTS:DataType="7">11/1/2024 9:41:51 PM</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Get LSET, CET of Stage_County"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{44f89d9f-ec03-41bc-b3c2-3afe43b68244}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get LSET, CET of Stage_County"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C437421F-DF1D-4F73-9607-E69A0B2E48A5}"
+          SQLTask:SqlStatementSource="Select LSET, CET from data_flow where name = 'Stage_USCountyData'"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="LSET"
+            SQLTask:DtsVariableName="User::LSET" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="CET"
+            SQLTask:DtsVariableName="User::CET" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Set CET County"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{c0e2aecd-ed58-413b-aa76-1db100359e70}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set CET County"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C437421F-DF1D-4F73-9607-E69A0B2E48A5}"
+          SQLTask:SqlStatementSource="Update data_flow set CET = GETDATE()&#xA;WHERE name = 'Stage_USCountyData'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Source To Stage AOI2023"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{c11fc683-2ccc-4250-9397-a90a41abf0f6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Source To Stage AOI2023"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Source To Stage AOI2023\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Source To Stage AOI2023\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Data Conversion.Inputs[Data Conversion Input].Columns[state_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state_id"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[state_id]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Data Conversion.Inputs[Data Conversion Input].Columns[county_fips]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_fips"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county_fips]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Source To Stage AOI2023\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Output].Columns[state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Output].Columns[state_id]"
+                      name="state_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[state_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Output].Columns[county_fips]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Output].Columns[county_fips]"
+                      name="county_fips"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county_fips]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Source To Stage AOI2023\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Source To Stage AOI2023\Load data in database"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load data in database"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stage_USCountyData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Source To Stage AOI2023\Load data in database.Connections[OleDbConnection]"
+                  connectionManagerID="{F7C16D9B-F1A7-4322-939B-C8C85672C1EA}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PROJECT_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].Columns[county]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].Columns[county_ascii]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_ascii"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[county_ascii]"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county_ascii]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].Columns[county_full]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_full"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[county_full]"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county_full]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].Columns[state_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state_name"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[state_name]"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[state_name]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].Columns[lat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="lat"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[lat]"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[lat]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].Columns[lng]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="lng"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[lng]"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[lng]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].Columns[population]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="population"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[population]"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[population]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].Columns[state_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="state_id"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[state_id]"
+                      lineageId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Output].Columns[state_id]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].Columns[county_fips]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="county_fips"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[county_fips]"
+                      lineageId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Output].Columns[county_fips]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[county_ascii]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_ascii" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[county_full]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="county_full" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[county_fips]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="county_fips" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="state_id" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[state_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state_name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[lat]"
+                      dataType="numeric"
+                      name="lat"
+                      precision="8"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[lng]"
+                      dataType="numeric"
+                      name="lng"
+                      precision="8"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input].ExternalColumns[population]"
+                      dataType="i4"
+                      name="population" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AOI2023\Load data in database.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\Load data in database.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\Load data in database.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\Load data in database.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Source To Stage AOI2023\US County Data from csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="US County Data from csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Source To Stage AOI2023\US County Data from csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[US COUNTY]"
+                  connectionManagerRefId="Package.ConnectionManagers[US COUNTY]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[county]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county]"
+                      name="county"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county_ascii]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[county_ascii]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county_ascii]"
+                      name="county_ascii"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county_full]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[county_full]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county_full]"
+                      name="county_full"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county_fips]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[county_fips]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[county_fips]"
+                      name="county_fips"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[state_id]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[state_id]"
+                      name="state_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[state_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[state_name]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[state_name]"
+                      name="state_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[lat]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[lat]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[lat]"
+                      name="lat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[lng]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[lng]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[lng]"
+                      name="lng"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[population]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[population]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].Columns[population]"
+                      name="population"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[county_ascii]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_ascii" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[county_full]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_full" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[county_fips]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_fips" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state_id" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[state_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state_name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[lat]"
+                      dataType="numeric"
+                      name="lat"
+                      precision="8"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[lng]"
+                      dataType="numeric"
+                      name="lng"
+                      precision="8"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output].ExternalColumns[population]"
+                      dataType="ui8"
+                      name="population" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Source To Stage AOI2023.Paths[Data Conversion Output]"
+              endId="Package\Source To Stage AOI2023\Load data in database.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Source To Stage AOI2023\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Source To Stage AOI2023.Paths[Flat File Source Output]"
+              endId="Package\Source To Stage AOI2023\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Source To Stage AOI2023\US County Data from csv.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Stage County"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{34ddea66-5917-4ed3-9ff9-9cd45d2c48fa}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Stage County"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F7C16D9B-F1A7-4322-939B-C8C85672C1EA}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Stage_USCountyData" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update LSET in metadata"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{d7248e95-5fd6-4e79-981c-42fc5ece1bda}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update LSET in metadata"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C437421F-DF1D-4F73-9607-E69A0B2E48A5}"
+          SQLTask:SqlStatementSource="Update data_flow set LSET = CET&#xA; WHERE name = 'Stage_USCountyData'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1 1 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{31b790d7-aad5-46a6-8011-dcf46ef101e6}"
+      DTS:From="Package\Truncate Stage County"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1 1 1"
+      DTS:To="Package\Get LSET, CET of Stage_County" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{c29ca0cf-7561-43e1-9386-df309d64f012}"
+      DTS:From="Package\Set CET County"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4 1"
+      DTS:To="Package\Truncate Stage County" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{23671d39-446c-474a-96ad-d46a3e47e6eb}"
+      DTS:From="Package\Get LSET, CET of Stage_County"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Source To Stage AOI2023" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{ca9706dc-702a-4d38-8b62-392b18c6e955}"
+      DTS:From="Package\Source To Stage AOI2023"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:To="Package\Update LSET in metadata" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Get LSET, CET of Stage_County"
+          TopLeft="35.1,208.7" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Set CET County"
+          TopLeft="40.3,5.49999999999995" />
+        <NodeLayout
+          Size="200,41.6"
+          Id="Package\Source To Stage AOI2023"
+          TopLeft="16.3,310.3" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Truncate Stage County"
+          TopLeft="30.7,107.1" />
+        <NodeLayout
+          Size="221.6,41.6"
+          Id="Package\Update LSET in metadata"
+          TopLeft="5.50000000000004,411.9" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1 1 1]"
+          TopLeft="116.3,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4 1]"
+          TopLeft="116.3,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="116.3,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="116.3,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Source To Stage AOI2023">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\Source To Stage AOI2023\US County Data from csv"
+          TopLeft="5.50000000000001,5.49999999999995" />
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\Source To Stage AOI2023\Load data in database"
+          TopLeft="12.7,208.7" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Source To Stage AOI2023\Data Conversion"
+          TopLeft="26.3,107.1" />
+        <EdgeLayout
+          Id="Package\Source To Stage AOI2023.Paths[Flat File Source Output]"
+          TopLeft="103.9,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Source To Stage AOI2023.Paths[Data Conversion Output]"
+          TopLeft="103.9,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Source To Stage AOI2023\Load data in database">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

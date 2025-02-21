@@ -1,0 +1,3192 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/1/2024 3:48:36 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSI"
+  DTS:CreatorName="MSI\Admin"
+  DTS:DTSID="{35D0AB43-F483-4823-B519-7F65C940D01E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{6505F134-5312-4291-B3D6-74E05B420532}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AOI2023]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D4D281C7-9A49-4BC6-A85A-B330B64A1528}"
+      DTS:ObjectName="AOI2023">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Admin\Desktop\BI\Đồ án\Air_Quality_Data-20241031T130148Z-001\Air_Quality_Data\10_state_aqi_2023.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{F95D3F96-23DD-4B39-AAD3-DC8BAF02FFA2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{6B16A7B8-2F89-4271-8E4A-60A6973CC892}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{49BC4D50-4F74-46F4-A26E-143692A01DD1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{BE0FA931-2A96-4500-8B58-A2EF07945972}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{D0016E36-68D7-4A11-9F48-3ABD9ED41591}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{DC0D4CD6-8893-43D2-82FC-2EBE950B497C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{3D754A05-B738-4530-9136-9C0512689B5D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{E11B7D5B-EF78-45AC-B94E-9CC4A078B103}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{46E93634-6A0F-4770-BEDC-1BDED5B5EB1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{3E6F7305-475E-47D3-AD5D-A0DFE05CC660}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{DAE6A419-ED93-40A1-864C-037188D2CFEE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{44435803-0968-456A-8F45-2ED96C425F20}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AQI2021]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{69726896-7237-4321-9E2A-10AF2FB8F5E5}"
+      DTS:ObjectName="AQI2021">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Admin\Desktop\BI\Đồ án\Air_Quality_Data-20241031T130148Z-001\Air_Quality_Data\10_state_aqi_2021.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{0FA9579A-B711-4552-AC92-25190902DAD0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{5C6374BF-4333-47FE-8BF8-39B6BC81F79C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{34D6441E-6B74-4F6D-86B0-0931FBCC4137}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{0EBDAE44-127F-41FA-B24C-9E9551675FD5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{1D303874-A124-4816-92D1-0A77324BDED2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{ECF97E21-98A4-4120-9CD3-CE1B2AD322DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{9946B1BC-2B9B-4235-9FCA-8C8C2750BE92}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{D4920D9A-366C-4074-AF00-26A19D27F02B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{53A30A9C-1C07-4C0F-A105-E4F83A56FD86}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{AF434DBF-FF27-4FB6-ACF8-D0EA4FD7E6CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{BD26E5AF-9997-4340-A4F2-D180440FC5B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{06EEFDA9-0CC6-44C3-9A1C-7D1DF9BC1051}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AQI2022]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7CD1A35E-64CF-4583-8423-208A2A422A84}"
+      DTS:ObjectName="AQI2022">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Admin\Desktop\BI\Đồ án\Air_Quality_Data-20241031T130148Z-001\Air_Quality_Data\10_state_aqi_2022.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{A6D8E6DD-0E59-4C15-80EE-DF675D2B1E03}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{CC15199A-E4B5-4745-80CE-E79BE15FD207}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{56CF9016-A0E8-4FB0-9498-8B74A5C46864}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{B8B6CD2C-4FF4-40A9-83D2-9F333DFF5044}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{0F550185-2F81-4D6D-8826-042E5B954556}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{AE85EFFA-25B6-4758-9DA0-8974146F6B4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{EBBB0CCA-8989-4A4E-A90E-830653C3A646}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{68F66FB6-C70D-4B58-A638-43BE4B1E0FA0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{25A6D1FF-D6E8-4AAC-98F7-A606F742475E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{BC5BE194-7D12-4DD9-85B8-4DB17539D17C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{0D353F9E-90E2-4F37-B252-5E1332F58418}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{9B485E99-BACC-484C-873C-64CE4ACFC471}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{93ECFE92-102E-4118-ACAA-1921D4B142D6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CET">
+      <DTS:VariableValue
+        DTS:DataType="7">11/1/2024 3:55:12 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BF4F2DA1-0FA8-4606-9CCE-EBC516DAED03}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSET">
+      <DTS:VariableValue
+        DTS:DataType="7">11/1/2024 3:55:06 PM</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Get LSET, CET of Stage_AQI"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{046D89C7-25C7-4930-9F89-B16330B63BE8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get LSET, CET of Stage_AQI"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C437421F-DF1D-4F73-9607-E69A0B2E48A5}"
+          SQLTask:SqlStatementSource="Select LSET, CET from data_flow where name = 'Stage_AirQualityData'"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="LSET"
+            SQLTask:DtsVariableName="User::LSET" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="CET"
+            SQLTask:DtsVariableName="User::CET" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Set CET AQI"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{EA102C2F-EA2F-4FE5-A1AA-3EF94D261415}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set CET AQI"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C437421F-DF1D-4F73-9607-E69A0B2E48A5}"
+          SQLTask:SqlStatementSource="Update data_flow set CET = GETDATE(), LSET = '1/1/2020'&#xA;WHERE name = 'Stage_AirQualityData'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Source To Stage AOI2022"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{2BEE1807-F3DF-4B46-A46D-FDCED758F15C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Source To Stage AOI2022"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Source To Stage AOI2022\AOI2022"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="AOI2022"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Source To Stage AOI2022\AOI2022.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AQI2022]"
+                  connectionManagerRefId="Package.ConnectionManagers[AQI2022]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[State Name]"
+                      name="State Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[county Name]"
+                      name="county Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[State Code]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[State Code]"
+                      name="State Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[County Code]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[County Code]"
+                      name="County Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[AQI]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[AQI]"
+                      name="AQI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      name="Defining Parameter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      name="Defining Site"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      name="Last Updated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      dataType="i1"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      dataType="i2"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      dataType="i2"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      dataType="i1"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      dataType="dbTimeStamp"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      dataType="dbTimeStamp"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Source To Stage AOI2022\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Source To Stage AOI2022\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\Conditional Split.Inputs[Conditional Split Input].Columns[Created]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Created"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\Conditional Split.Inputs[Conditional Split Input].Columns[Last Updated]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Last Updated"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Last Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AOI2022\Conditional Split.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\Source To Stage AOI2022\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Created]} &gt;= @[User::LSET] &amp;&amp; #{Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Created]} &lt; @[User::CET]) || (#{Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Last Updated]} &gt;= @[User::LSET] &amp;&amp; #{Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Last Updated]} &lt; @[User::CET])</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(Created &gt;= @[User::LSET] &amp;&amp; Created &lt; @[User::CET]) || ([Last Updated] &gt;= @[User::LSET] &amp;&amp; [Last Updated] &lt; @[User::CET])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Source To Stage AOI2022\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Source To Stage AOI2022\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Source To Stage AOI2022\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Source To Stage AOI2022\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2022\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2022\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Source To Stage AOI2022\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stage_AirQualityData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Source To Stage AOI2022\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{F7C16D9B-F1A7-4322-939B-C8C85672C1EA}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PROJECT_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AQI]"
+                      cachedDataType="i2"
+                      cachedName="AQI"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[AQI]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Created]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Created"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[State Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State Name"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Name]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[State Name]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[county Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county Name"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Name]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[county Name]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[State Code]"
+                      cachedDataType="i1"
+                      cachedName="State Code"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Code]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[State Code]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[County Code]"
+                      cachedDataType="i2"
+                      cachedName="County Code"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Code]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[County Code]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Defining Parameter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Parameter"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Parameter]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Defining Parameter]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Defining Site]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Site"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Site]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Defining Site]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Number of Sites Reporting]"
+                      cachedDataType="i1"
+                      cachedName="Number of Sites Reporting"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Sites_Reporting]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Updated]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Last Updated"
+                      externalMetadataColumnId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last_Updated]"
+                      lineageId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output].Columns[Last Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="County_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Code]"
+                      dataType="i4"
+                      name="State_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Code]"
+                      dataType="i4"
+                      name="County_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      dataType="i4"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Defining_Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Defining_Site" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Sites_Reporting]"
+                      dataType="i4"
+                      name="Number_of_Sites_Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      dataType="dbTimeStamp"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last_Updated]"
+                      dataType="dbTimeStamp"
+                      name="Last_Updated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AOI2022\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2022\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2022\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2022\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Source To Stage AOI2022.Paths[Case 1]"
+              endId="Package\Source To Stage AOI2022\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Case 1"
+              startId="Package\Source To Stage AOI2022\Conditional Split.Outputs[Case 1]" />
+            <path
+              refId="Package\Source To Stage AOI2022.Paths[Flat File Source Output]"
+              endId="Package\Source To Stage AOI2022\Conditional Split.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\Source To Stage AOI2022\AOI2022.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Source To Stage AOI2023"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{3065A2C8-778C-464C-9671-3EA76E07A400}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Source To Stage AOI2023"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Source To Stage AOI2023\AOI2023"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="AOI2023"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Source To Stage AOI2023\AOI2023.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AOI2023]"
+                  connectionManagerRefId="Package.ConnectionManagers[AOI2023]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[State Name]"
+                      name="State Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[county Name]"
+                      name="county Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[State Code]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[State Code]"
+                      name="State Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[County Code]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[County Code]"
+                      name="County Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[AQI]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[AQI]"
+                      name="AQI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      name="Defining Parameter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      length="50"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      name="Defining Site"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      name="Last Updated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      dataType="i1"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      dataType="i2"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      dataType="i2"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      dataType="i1"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      dataType="dbTimeStamp"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      dataType="dbTimeStamp"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Source To Stage AOI2023\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Source To Stage AOI2023\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Conditional Split.Inputs[Conditional Split Input].Columns[Created]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Created"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\Conditional Split.Inputs[Conditional Split Input].Columns[Last Updated]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Last Updated"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Last Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AOI2023\Conditional Split.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\Source To Stage AOI2023\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Created]} &gt;= @[User::LSET] &amp;&amp; #{Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Created]} &lt; @[User::CET]) || (#{Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Last Updated]} &gt;= @[User::LSET] &amp;&amp; #{Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Last Updated]} &lt; @[User::CET])</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(Created &gt;= @[User::LSET] &amp;&amp; Created &lt; @[User::CET]) || ([Last Updated] &gt;= @[User::LSET] &amp;&amp; [Last Updated] &lt; @[User::CET])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Source To Stage AOI2023\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Source To Stage AOI2023\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Source To Stage AOI2023\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Source To Stage AOI2023\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Source To Stage AOI2023\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stage_AirQualityData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Source To Stage AOI2023\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{F7C16D9B-F1A7-4322-939B-C8C85672C1EA}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PROJECT_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AQI]"
+                      cachedDataType="i2"
+                      cachedName="AQI"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[AQI]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Created]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Created"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[State Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State Name"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Name]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[State Name]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[county Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county Name"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Name]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[county Name]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[State Code]"
+                      cachedDataType="i1"
+                      cachedName="State Code"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Code]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[State Code]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[County Code]"
+                      cachedDataType="i2"
+                      cachedName="County Code"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Code]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[County Code]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Defining Parameter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Parameter"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Parameter]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Defining Parameter]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Defining Site]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Site"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Site]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Defining Site]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Number of Sites Reporting]"
+                      cachedDataType="i1"
+                      cachedName="Number of Sites Reporting"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Sites_Reporting]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Updated]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Last Updated"
+                      externalMetadataColumnId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last_Updated]"
+                      lineageId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output].Columns[Last Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="County_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Code]"
+                      dataType="i4"
+                      name="State_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Code]"
+                      dataType="i4"
+                      name="County_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      dataType="i4"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Defining_Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Defining_Site" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Sites_Reporting]"
+                      dataType="i4"
+                      name="Number_of_Sites_Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      dataType="dbTimeStamp"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last_Updated]"
+                      dataType="dbTimeStamp"
+                      name="Last_Updated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AOI2023\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AOI2023\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AOI2023\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Source To Stage AOI2023.Paths[Case 1]"
+              endId="Package\Source To Stage AOI2023\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Case 1"
+              startId="Package\Source To Stage AOI2023\Conditional Split.Outputs[Case 1]" />
+            <path
+              refId="Package\Source To Stage AOI2023.Paths[Flat File Source Output]"
+              endId="Package\Source To Stage AOI2023\Conditional Split.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\Source To Stage AOI2023\AOI2023.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Source To Stage AQI2021"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{073966C5-96A4-45FA-9C9C-6EF9043FF88F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Source To Stage AQI2021"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Source To Stage AQI2021\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Source To Stage AQI2021\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\Conditional Split.Inputs[Conditional Split Input].Columns[Created]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Created"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\Conditional Split.Inputs[Conditional Split Input].Columns[Last Updated]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Last Updated"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Last Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AQI2021\Conditional Split.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\Source To Stage AQI2021\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Created]} &gt;= @[User::LSET] &amp;&amp; #{Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Created]} &lt; @[User::CET]) || (#{Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Last Updated]} &gt;= @[User::LSET] &amp;&amp; #{Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Last Updated]} &lt; @[User::CET])</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(Created &gt;= @[User::LSET] &amp;&amp; Created &lt; @[User::CET]) || ([Last Updated] &gt;= @[User::LSET] &amp;&amp; [Last Updated] &lt; @[User::CET])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Source To Stage AQI2021\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Source To Stage AQI2021\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Source To Stage AQI2021\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Source To Stage AQI2021\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AQI2021\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AQI2021\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Source To Stage AQI2021\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stage_AirQualityData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Source To Stage AQI2021\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{F7C16D9B-F1A7-4322-939B-C8C85672C1EA}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PROJECT_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AQI]"
+                      cachedDataType="i8"
+                      cachedName="AQI"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[AQI]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Created]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Created"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[State Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State Name"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Name]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[State Name]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[county Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county Name"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Name]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[county Name]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[State Code]"
+                      cachedDataType="i8"
+                      cachedName="State Code"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Code]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[State Code]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[County Code]"
+                      cachedDataType="i8"
+                      cachedName="County Code"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Code]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[County Code]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Defining Parameter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Parameter"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Parameter]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Defining Parameter]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Defining Site]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Site"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Site]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Defining Site]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Number of Sites Reporting]"
+                      cachedDataType="i8"
+                      cachedName="Number of Sites Reporting"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Sites_Reporting]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]" />
+                    <inputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Updated]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Last Updated"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last_Updated]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Last Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="County_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Code]"
+                      dataType="i4"
+                      name="State_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_Code]"
+                      dataType="i4"
+                      name="County_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      dataType="i4"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Defining_Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Defining_Site" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Sites_Reporting]"
+                      dataType="i4"
+                      name="Number_of_Sites_Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      dataType="dbTimeStamp"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last_Updated]"
+                      dataType="dbTimeStamp"
+                      name="Last_Updated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AQI2021\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AQI2021\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AQI2021\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Source To Stage AQI2021\Source AOI2021"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Source AOI2021"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Source To Stage AQI2021\Source AOI2021.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AQI2021]"
+                  connectionManagerRefId="Package.ConnectionManagers[AQI2021]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      length="50"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[State Name]"
+                      name="State Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      length="50"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[county Name]"
+                      name="county Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[State Code]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[State Code]"
+                      name="State Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[County Code]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[County Code]"
+                      name="County Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[AQI]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[AQI]"
+                      name="AQI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      length="50"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      name="Defining Parameter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      length="50"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      name="Defining Site"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      name="Last Updated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      dataType="i8"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      dataType="i8"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      dataType="i8"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      dataType="i8"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      dataType="dbTimeStamp"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      dataType="dbTimeStamp"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Source To Stage AQI2021.Paths[Case 1]"
+              endId="Package\Source To Stage AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Case 1"
+              startId="Package\Source To Stage AQI2021\Conditional Split.Outputs[Case 1]" />
+            <path
+              refId="Package\Source To Stage AQI2021.Paths[Flat File Source Output]"
+              endId="Package\Source To Stage AQI2021\Conditional Split.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\Source To Stage AQI2021\Source AOI2021.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Stage AQI"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{5F084F9C-59DE-456C-B6D5-8F2DC2B1C495}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Stage AQI"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F7C16D9B-F1A7-4322-939B-C8C85672C1EA}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Stage_AirQualityData" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update LSET AQI in metadata"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{5F9C619B-075F-4CFE-A143-8F6AB525404F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update LSET AQI in metadata"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C437421F-DF1D-4F73-9607-E69A0B2E48A5}"
+          SQLTask:SqlStatementSource="update data_flow set LSET = CET &#xA;where name =  'Stage_AirQualityData'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{D277F799-340A-47DD-853E-8F160C881D02}"
+      DTS:From="Package\Set CET AQI"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Truncate Stage AQI" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{383DB848-4F2D-4C91-8C1A-D92B01DD1830}"
+      DTS:From="Package\Truncate Stage AQI"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Get LSET, CET of Stage_AQI" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{35C8821B-B2D1-4C59-9784-DA2454A666A5}"
+      DTS:From="Package\Get LSET, CET of Stage_AQI"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Source To Stage AQI2021" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{91B69FC4-114C-47E4-8AAE-0D8A7F344565}"
+      DTS:From="Package\Source To Stage AQI2021"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Source To Stage AOI2022" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{90836134-710C-46DD-B4EB-98F9A5F39E6A}"
+      DTS:From="Package\Source To Stage AOI2022"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Source To Stage AOI2023" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{697D01AF-46B0-4FA4-A3EA-3114BF333276}"
+      DTS:From="Package\Source To Stage AOI2023"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Update LSET AQI in metadata" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="212.8,41.6"
+          Id="Package\Get LSET, CET of Stage_AQI"
+          TopLeft="412.857149888058,53.2352944715623" />
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\Set CET AQI"
+          TopLeft="22.8571432463977,48.6470591130966" />
+        <NodeLayout
+          Size="200,41.6"
+          Id="Package\Source To Stage AOI2022"
+          TopLeft="362.71746645363,128.810459322858" />
+        <NodeLayout
+          Size="200,41.6"
+          Id="Package\Source To Stage AOI2023"
+          TopLeft="216.349210033611,221.424839706707" />
+        <NodeLayout
+          Size="200,41.6"
+          Id="Package\Source To Stage AQI2021"
+          TopLeft="656.9841381725,124.437909849237" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Truncate Stage AQI"
+          TopLeft="197.85714622663,50.1764708992519" />
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\Update LSET AQI in metadata"
+          TopLeft="72.6984139364593,129.15032860867" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="159.657143246398,70.2117650061743">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.2000029802323,0"
+              Start="0,0"
+              End="30.7000029802323,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="30.7000029802323,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="369.05714622663,72.5058826854071">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="43.800003661428,0"
+              Start="0,0"
+              End="36.300003661428,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="36.300003661428,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="519.257149888058,94.8352944715623">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="237.726988284442,29.602615377675"
+              Start="0,0"
+              End="237.726988284442,22.102615377675">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.8013076888375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.8013076888375"
+                    Point2="0,14.8013076888375"
+                    Point3="4,14.8013076888375" />
+                  <mssgle:LineSegment
+                    End="233.726988284442,14.8013076888375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="233.726988284442,14.8013076888375"
+                    Point2="237.726988284442,14.8013076888375"
+                    Point3="237.726988284442,18.8013076888375" />
+                  <mssgle:LineSegment
+                    End="237.726988284442,22.102615377675" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="284.349210033611,221.424839706707">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-102.050796097152,-50.6745110980369"
+              Start="0,0"
+              End="-102.050796097152,-43.1745110980369">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-16.5111116349197" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-16.5111116349197"
+                    Point2="0,-20.5111116349197"
+                    Point3="-4,-20.5111116349197" />
+                  <mssgle:LineSegment
+                    End="-98.0507960971522,-20.5111116349197" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-98.0507960971522,-20.5111116349197"
+                    Point2="-102.050796097152,-20.5111116349197"
+                    Point3="-102.050796097152,-24.5111116349197" />
+                  <mssgle:LineSegment
+                    End="-102.050796097152,-43.1745110980369" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="656.9841381725,147.424184586047">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-94.2666717188707,0"
+              Start="0,0"
+              End="-86.7666717188707,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-86.7666717188707,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="462.71746645363,170.410459322858">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-114.368256420018,51.0143803838494"
+              Start="0,0"
+              End="-114.368256420018,43.5143803838494">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.3657026094342" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.3657026094342"
+                    Point2="0,30.3657026094342"
+                    Point3="-4,30.3657026094342" />
+                  <mssgle:LineSegment
+                    End="-110.368256420018,30.3657026094342" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-110.368256420018,30.3657026094342"
+                    Point2="-114.368256420018,30.3657026094342"
+                    Point3="-114.368256420018,34.3657026094342" />
+                  <mssgle:LineSegment
+                    End="-114.368256420018,43.5143803838494" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Source To Stage AOI2022">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Source To Stage AOI2022\OLE DB Destination"
+          TopLeft="160.769230769231,230.923076923077" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Source To Stage AOI2022\Conditional Split"
+          TopLeft="166,126.153846153846" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Source To Stage AOI2022\AOI2022"
+          TopLeft="182,27" />
+        <EdgeLayout
+          Id="Package\Source To Stage AOI2022.Paths[Flat File Source Output]"
+          TopLeft="242.6,68.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.5538461538462"
+              Start="0,0"
+              End="0,50.0538461538462">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.0538461538462" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Source To Stage AOI2022.Paths[Case 1]"
+          TopLeft="244.584615384615,167.753846153846">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.1692307692306"
+              Start="0,0"
+              End="0,55.6692307692306">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.6692307692306" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.2180859375,23.0577599158653,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Source To Stage AOI2022\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Source To Stage AOI2023">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Source To Stage AOI2023\OLE DB Destination"
+          TopLeft="160.769230769231,230.923076923077" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Source To Stage AOI2023\Conditional Split"
+          TopLeft="166,126.153846153846" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Source To Stage AOI2023\AOI2023"
+          TopLeft="182,27" />
+        <EdgeLayout
+          Id="Package\Source To Stage AOI2023.Paths[Flat File Source Output]"
+          TopLeft="242.6,68.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.553846153846"
+              Start="0,0"
+              End="0,50.053846153846">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.053846153846" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Source To Stage AOI2023.Paths[Case 1]"
+          TopLeft="244.584615384615,167.753846153846">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.1692307692306"
+              Start="0,0"
+              End="0,55.6692307692306">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.6692307692306" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.2180859375,23.0577599158653,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Source To Stage AQI2021">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Source To Stage AQI2021\Conditional Split"
+          TopLeft="89.285715806241,113.94117806857" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Source To Stage AQI2021\OLE DB Destination"
+          TopLeft="78.571429909492,222.529414885597" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Source To Stage AQI2021\Source AOI2021"
+          TopLeft="91.4285729855907,29.0588239369508" />
+        <EdgeLayout
+          Id="Package\Source To Stage AQI2021.Paths[Flat File Source Output]"
+          TopLeft="167.757144395916,70.6588239369508">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.2823541316195"
+              Start="0,0"
+              End="0,35.7823541316195">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.7823541316195" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Source To Stage AQI2021.Paths[Case 1]"
+          TopLeft="165.128572857866,155.54117806857">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66.9882368170265"
+              Start="0,0"
+              End="0,59.4882368170265">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.4882368170265" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.2180859375,24.9672629397633,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Source To Stage AQI2021\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

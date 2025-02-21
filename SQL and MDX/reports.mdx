@@ -1,0 +1,251 @@
+-- 1. Report the min and max of AQI value for each State during each quarter of years.
+SELECT 
+    { [Measures].[MinAQI],
+      [Measures].[MaxAQI]
+	} ON COLUMNS,
+    NON EMPTY 
+    (
+        --[Dim State].[State Name].[State Name].MEMBERS *
+		[Dim County].[State Name].[State Name].MEMBERS *
+        [Dim Date].[Hierarchy Date].[Year].MEMBERS *
+        --[Dim Date].[Hierarchy Date].[Quarter].MEMBERS
+		[Dim Date].[Quarter].[Quarter].MEMBERS
+    ) ON ROWS
+FROM [OLAP];
+
+-- 2. Report the mean and the standard deviation of AQI value for each State during each quarter of years.
+WITH 
+MEMBER [Measures].[Max_AQI] AS 
+    CoalesceEmpty([Measures].[MaxAQI], 0)
+MEMBER [Measures].[Min_AQI] AS 
+    CoalesceEmpty([Measures].[MinAQI], 0)
+MEMBER [Measures].[Mean_AQI] AS 
+    CoalesceEmpty([Measures].[Mean AQI], 0)
+MEMBER [Measures].[Standard_Deviation] AS 
+    CoalesceEmpty([Measures].[Standard Deviation], 0)
+SELECT 
+NON EMPTY { [Measures].[Max_AQI], [Measures].[Min_AQI], [Measures].[Mean_AQI], [Measures].[Standard_Deviation] } ON COLUMNS,
+NON EMPTY { 
+FILTER([Dim County].[State Name].[State Name] * [Dim Date].[Year].[Year].ALLMEMBERS * [Dim Date].[Quarter].[Quarter],
+[Dim County].[State Name].CURRENTMEMBER.NAME <> "Unknown" AND
+[Dim Date].[Year].CURRENTMEMBER.NAME <> "Unknown" AND 
+[Dim Date].[Quarter].CURRENTMEMBER.NAME <> "Unknown") }
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [OLAP];
+
+-- 3. Report the number of days, and the mean AQI value where the air quality is rated
+--as "very unhealthy" or worse for each State and County.
+SELECT NON EMPTY 
+    { [Measures].[NumberOfDay], [Measures].[Mean AQI] } ON COLUMNS, 
+    NON EMPTY 
+    { 
+        CROSSJOIN([Dim County].[Hierarchy County].[State Name],[Dim County].[County].[County])
+    } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS
+FROM 
+    (SELECT 
+            {[Dim Category].[Hierarchy Category].[Category].&[Hazardous], 
+             [Dim Category].[Hierarchy Category].[Category].&[Very Unhealthy] 
+            } ON COLUMNS 
+        FROM [OLAP]);
+
+
+-- 4. For the four following states: Hawaii, Alaska, Illinois and Delaware,
+-- count the number of days in each air quality Category (Good, Moderate,etc.) by County
+WITH 
+MEMBER [Measures].[CoalescedMeasure] AS 
+    CoalesceEmpty([Measures].[NumberOfDay], 0) -- Null to 0
+SELECT
+    FILTER(
+        [Dim Category].[Category].MEMBERS,
+        NOT(
+           [Dim Category].[Category].CURRENTMEMBER.NAME = "UNKNOWN"
+        )
+    ) ON COLUMNS,
+    NON EMPTY 
+    { [Dim County].[State Name].[Hawaii],
+      [Dim County].[State Name].[Alaska],
+      [Dim County].[State Name].[Illinois],
+      [Dim County].[State Name].[Delaware] }
+    * FILTER(
+        {[Dim County].[County].MEMBERS},
+        [Dim County].[County].CURRENTMEMBER.NAME <> "All"
+    ) ON ROWS
+FROM [OLAP]
+WHERE [Measures].[CoalescedMeasure];
+
+
+-- 5. For the four following states: Hawaii, Alaska, Illinois and Delaware, compute the
+--mean AQI value by quarters.
+WITH 
+Member [Measures].[Trung binh AQI] AS 
+CoalesceEmpty([Measures].[Mean AQI],0) --Null to 0
+SELECT 
+    FILTER ({
+            [Dim Date].[Hierarchy Date].[Year].Members *
+            [Dim Date].[Quarter].Members
+			},  ([Dim Date].[Year].CURRENTMEMBER.NAME <> "Unknown" AND [Dim Date].[Quarter].CURRENTMEMBER.NAME <> "Unknown")
+			) ON COLUMNS,
+    NON EMPTY 
+    { [Dim County].[State Name].[Hawaii],
+      [Dim County].[State Name].[Alaska],
+      [Dim County].[State Name].[Illinois],
+      [Dim County].[State Name].[Delaware] }
+    ON ROWS
+FROM [OLAP]
+WHERE [Measures].[Trung binh AQI];
+
+-- 6. Design a report to demonstrate the AQI fluctuation trends over the year for the four
+--following states: Hawaii, Alaska, Illinois and California.
+WITH 
+MEMBER [Measures].[Max_AQI] AS 
+    CoalesceEmpty([Measures].[MaxAQI], 0)
+MEMBER [Measures].[Min_AQI] AS 
+    CoalesceEmpty([Measures].[MinAQI], 0)
+MEMBER [Measures].[Mean_AQI] AS 
+    CoalesceEmpty([Measures].[Mean AQI], 0)
+MEMBER [Measures].[Standard_Deviation] AS 
+    CoalesceEmpty([Measures].[Standard Deviation], 0)
+SELECT 
+NON EMPTY { [Measures].[Max_AQI], [Measures].[Min_AQI], [Measures].[Mean_AQI], [Measures].[Standard_Deviation] } ON COLUMNS,
+    NON EMPTY 
+        { 
+            [Dim County].[State Name].[Hawaii],
+            [Dim County].[State Name].[Alaska],
+            [Dim County].[State Name].[Illinois],
+            [Dim County].[State Name].[California]
+        }
+    * 
+        FILTER(
+            [Dim Date].[Year].[Year].ALLMEMBERS * 
+            [Dim Date].[Quarter].[Quarter].ALLMEMBERS,
+            [Dim Date].[Year].CURRENTMEMBER.NAME <> "Unknown" AND
+            [Dim Date].[Quarter].CURRENTMEMBER.NAME <> "Unknown"
+        ) 
+    DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME 
+    ON ROWS 
+FROM [OLAP];
+
+
+
+--8. Use a regional map to visually represent (by color) the mean AQI value in regions during a year.
+--Version 1
+SELECT 
+    {[Measures].[Mean AQI]} ON COLUMNS,
+    NON EMPTY 
+    CROSSJOIN(
+        [Dim Date].[Hierarchy Date].[Year].&[2023],              -- Year 2023
+		[Dim Date].[Quarter].[Quarter],
+        [Dim Date].[Month].[Month].Members,             -- All Months
+        [Dim County].[State Name].[State Name].Members           -- All States
+    ) ON ROWS
+FROM [OLAP];
+
+--Version 2
+WITH 
+Member [Measures].[Trung binh AQI] AS 
+CoalesceEmpty([Measures].[Mean AQI],0) --Doi ten
+SELECT 
+    FILTER ({
+            [Dim Date].[Hierarchy Date].[Year].&[2023] *
+            [Dim Date].[Quarter].[Quarter] *
+			[Dim Date].[Month].[Month]
+			},  ([Dim Date].[Year].CURRENTMEMBER.NAME <> "Unknown" AND [Dim Date].[Quarter].CURRENTMEMBER.NAME <> "Unknown")
+			) ON COLUMNS,
+    NON EMPTY [Dim County].[State Name].[State Name].Members  ON ROWS
+FROM [OLAP]
+WHERE [Measures].[Trung binh AQI];
+
+-- 9. Report the mean, the standard deviation, min and max of AQI value group by
+-- State and County during each quarter of the year.
+WITH 
+MEMBER [Measures].[Max_AQI] AS 
+    CoalesceEmpty([Measures].[MaxAQI], 0)
+MEMBER [Measures].[Min_AQI] AS 
+    CoalesceEmpty([Measures].[MinAQI], 0)
+MEMBER [Measures].[Mean_AQI] AS 
+    CoalesceEmpty([Measures].[Mean AQI], 0)
+MEMBER [Measures].[Standard_Deviation] AS 
+    CoalesceEmpty([Measures].[Standard Deviation], 0)
+SELECT 
+NON EMPTY { [Measures].[Max_AQI], [Measures].[Min_AQI], [Measures].[Mean_AQI], [Measures].[Standard_Deviation] } ON COLUMNS,
+NON EMPTY { 
+FILTER([Dim County].[State Name].[State Name] * [Dim County].[County].[County] * [Dim Date].[Year].[Year].ALLMEMBERS * [Dim Date].[Quarter].[Quarter],
+[Dim County].[State Name].CURRENTMEMBER.NAME <> "Unknown" AND
+[Dim Date].[Year].CURRENTMEMBER.NAME <> "Unknown" AND 
+[Dim Date].[Quarter].CURRENTMEMBER.NAME <> "Unknown") }
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [OLAP];
+
+-- 10. Report the mean AQI value by State, Category, DayLightSaving over years.
+--Version 1
+WITH 
+MEMBER [Measures].[Mean_AQI] AS 
+    CoalesceEmpty([Measures].[Mean AQI], 0) -- Null to 0
+SELECT 
+  [Measures].[Mean_AQI] ON COLUMNS,
+  NON EMPTY { 
+    FILTER(
+      [Dim County].[State Name].[State Name].MEMBERS * 
+      [Dim Category].[Category].[Category].MEMBERS,
+      [Dim County].[State Name].CURRENTMEMBER.NAME <> "Unknown" AND
+      [Dim Category].[Category].CURRENTMEMBER.NAME <> "Unknown"
+    )
+  }
+  DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS 
+FROM [OLAP]
+WHERE (
+	[Dim Date].[Day Light Saving].[TRUE]
+);
+
+--Version 2
+WITH 
+MEMBER [Measures].[Mean_AQI] AS 
+    CoalesceEmpty([Measures].[Mean AQI], 0) -- Null to 0
+SELECT 
+  NON EMPTY 
+     FILTER(
+  [Dim Category].[Category].[Category].MEMBERS,
+  [Dim Category].[Category].CURRENTMEMBER.NAME <> "Unknown")
+ ON COLUMNS, -- Categories as columns
+  NON EMPTY 
+    FILTER(
+  [Dim County].[State Name].[State Name].MEMBERS,
+  [Dim County].[State Name].CURRENTMEMBER.NAME <> "Unknown"
+) ON ROWS -- States as rows
+FROM [OLAP]
+WHERE (
+	[Measures].[Mean_AQI],
+    [Dim Date].[Day Light Saving].[TRUE] -- Filter for Daylight Saving Time
+);
+
+-- 11. Count the number of days by State, Category in each month
+WITH 
+MEMBER [Measures].[CoalescedMeasure] AS 
+    CoalesceEmpty([Measures].[NumberOfDay], 0) -- Null to 0
+SELECT 
+    NON EMPTY FILTER({[Dim Date].[Year].[Year].MEMBERS * [Dim Date].[Quarter].[Quarter] * [Dim Date].[Month].[Month].MEMBERS},
+		[Dim Date].[Year].CURRENTMEMBER.Name <> "Unknown" AND
+		 [Dim Date].[Quarter].CURRENTMEMBER.Name <> "Unknown" AND
+		[Dim Date].[Month].CURRENTMEMBER.Name <> "Unknown"
+	) ON COLUMNS,
+    NON EMPTY 
+    CROSSJOIN(
+        FILTER(
+            [Dim County].[State Name].MEMBERS, 
+            [Dim County].[State Name].CURRENTMEMBER.Name <> "All" AND [Dim County].[State Name].CURRENTMEMBER.Name <> "Unknown"
+        ),
+        FILTER(
+            [Dim Category].[Category].MEMBERS,
+            [Dim Category].[Category].CURRENTMEMBER.Name <> "All" AND [Dim Category].[Category].CURRENTMEMBER.Name <> "Unknown"
+        )
+    ) ON ROWS
+FROM [OLAP]
+WHERE [Measures].[CoalescedMeasure];
+
+-- 12. Report the number of days by Category and Defining Parameter.
+SELECT 
+    [Measures].[NumberOfDay] ON COLUMNS,
+    NON EMPTY 
+    (
+        [Dim Category].[Category].[Category].MEMBERS *
+        [Dim Parameter].[Defining Parameter].[Defining Parameter].MEMBERS
+    ) ON ROWS
+FROM [OLAP];

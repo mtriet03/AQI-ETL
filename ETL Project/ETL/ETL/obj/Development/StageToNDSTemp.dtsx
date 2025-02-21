@@ -1,0 +1,1480 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/1/2024 7:51:46 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSI"
+  DTS:CreatorName="MSI\Admin"
+  DTS:DTSID="{4AA26ED9-BFA8-4D2B-B172-72C5E3D2DD4D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{8AAD5AFA-9167-4C9D-B922-E5D16EF2A4ED}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E8077C02-32C9-4385-8692-D882C0943491}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Insert in NDS"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert in NDS"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[NDS_AirQualityData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Insert in NDS.Connections[OleDbConnection]"
+                  connectionManagerID="{636D4B29-BC64-4609-AFEF-C57BD58389F3}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PROJECT_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[State_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State_Name"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[State_Name]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[County_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="County_Name"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[County_Name]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[State_Code]"
+                      cachedDataType="i4"
+                      cachedName="State_Code"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[State_Code]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[County_Code]"
+                      cachedDataType="i4"
+                      cachedName="County_Code"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[County_Code]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[AQI]"
+                      cachedDataType="i4"
+                      cachedName="AQI"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[AQI]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[Defining_Parameter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Defining_Parameter"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Parameter]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Defining_Parameter]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[Defining_Site]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Defining_Site"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Site]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Defining_Site]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[Number_of_Sites_Reporting]"
+                      cachedDataType="i4"
+                      cachedName="Number_of_Sites_Reporting"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Sites_Reporting]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Number_of_Sites_Reporting]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[Created]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Created"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].Columns[Last_Updated]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Last_Updated"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Last_Updated]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Last_Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[AQI_SK]"
+                      dataType="i4"
+                      name="AQI_SK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[State_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[County_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="County_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[State_Code]"
+                      dataType="i4"
+                      name="State_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[County_Code]"
+                      dataType="i4"
+                      name="County_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      dataType="i4"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Defining_Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Defining_Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Defining_Site" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Sites_Reporting]"
+                      dataType="i4"
+                      name="Number_of_Sites_Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      dataType="dbTimeStamp"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input].ExternalColumns[Last_Updated]"
+                      dataType="dbTimeStamp"
+                      name="Last_Updated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Insert in NDS.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Insert in NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Insert in NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Insert in NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Load Stage"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Load Stage"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stage_AirQualityData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Load Stage.Connections[OleDbConnection]"
+                  connectionManagerID="{F7C16D9B-F1A7-4322-939B-C8C85672C1EA}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PROJECT_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[State_Name]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Name]"
+                      name="State_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[County_Name]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Name]"
+                      name="County_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[State_Code]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Code]"
+                      name="State_Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[County_Code]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Code]"
+                      name="County_Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[AQI]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[AQI]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[AQI]"
+                      name="AQI"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Defining_Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Defining_Parameter]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Defining_Parameter]"
+                      name="Defining_Parameter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Defining_Site]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Defining_Site]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Defining_Site]"
+                      name="Defining_Site"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Number_of_Sites_Reporting]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Number_of_Sites_Reporting]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Number_of_Sites_Reporting]"
+                      name="Number_of_Sites_Reporting"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Created]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Last_Updated]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Last_Updated]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Last_Updated]"
+                      name="Last_Updated"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[State_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[County_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="County_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[State_Code]"
+                      dataType="i4"
+                      name="State_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[County_Code]"
+                      dataType="i4"
+                      name="County_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[AQI]"
+                      dataType="i4"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Defining_Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Defining_Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Defining_Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Defining_Site" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Number_of_Sites_Reporting]"
+                      dataType="i4"
+                      name="Number_of_Sites_Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Created]"
+                      dataType="dbTimeStamp"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].ExternalColumns[Last_Updated]"
+                      dataType="dbTimeStamp"
+                      name="Last_Updated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[State_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[State_Name]"
+                      name="State_Name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[County_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[County_Name]"
+                      name="County_Name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[State_Code]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[State_Code]"
+                      name="State_Code" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[County_Code]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[County_Code]"
+                      name="County_Code" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[AQI]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[AQI]"
+                      name="AQI" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Defining_Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Defining_Parameter]"
+                      name="Defining_Parameter" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Defining_Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Defining_Site]"
+                      name="Defining_Site" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Number_of_Sites_Reporting]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Number_of_Sites_Reporting]"
+                      name="Number_of_Sites_Reporting" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Created]"
+                      name="Created" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Last_Updated]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[Last_Updated]"
+                      name="Last_Updated" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Lookup ID in NDS"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup ID in NDS"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[NDS_AirQualityData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[NDS_AirQualityData]) [refTable]
+where [refTable].[State_Name] = ? and [refTable].[County_Name] = ? and [refTable].[State_Code] = ? and [refTable].[County_Code] = ? and [refTable].[Date] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AQI_SK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="State_Name" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="County_Name" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="State_Code" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="County_Code" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AQI" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Category" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Defining_Parameter" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Defining_Site" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Number_of_Sites_Reporting" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Created" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Last_Updated" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Name]};#{Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Name]};#{Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Code]};#{Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Code]};#{Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Date]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Lookup ID in NDS.Connections[OleDbConnection]"
+                  connectionManagerID="{636D4B29-BC64-4609-AFEF-C57BD58389F3}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PROJECT_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Lookup ID in NDS.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lookup ID in NDS.Inputs[Lookup Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Date</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lookup ID in NDS.Inputs[Lookup Input].Columns[County_Code]"
+                      cachedDataType="i4"
+                      cachedName="County_Code"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Code]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">County_Code</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lookup ID in NDS.Inputs[Lookup Input].Columns[State_Code]"
+                      cachedDataType="i4"
+                      cachedName="State_Code"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Code]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">State_Code</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lookup ID in NDS.Inputs[Lookup Input].Columns[County_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="County_Name"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Name]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">County_Name</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lookup ID in NDS.Inputs[Lookup Input].Columns[State_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State_Name"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Name]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">State_Name</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Lookup ID in NDS.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup ID in NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup ID in NDS.Outputs[Lookup Match Output].Columns[AQI_SK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Data Flow Task\Lookup ID in NDS.Outputs[Lookup Match Output].Columns[AQI_SK]"
+                      name="AQI_SK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">AQI_SK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lookup ID in NDS.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup ID in NDS.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lookup ID in NDS.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup ID in NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup ID in NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lookup ID in NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup ID in NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lookup ID in NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Update Data In NDS"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Update Data In NDS"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[NDS_AirQualityData]
+   SET [State_Name] = ?
+      ,[County_Name] = ?
+      ,[AQI] = ?
+      ,[Category] = ?
+      ,[Defining_Parameter] = ?
+      ,[Defining_Site] = ?
+      ,[Number_of_Sites_Reporting] = ?
+      ,[Created] = ?
+      ,[Last_Updated] = ?
+ WHERE  [State_Code] = ?
+      AND [County_Code] = ?
+      AND [Date] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Update Data In NDS.Connections[OleDbConnection]"
+                  connectionManagerID="{636D4B29-BC64-4609-AFEF-C57BD58389F3}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PROJECT_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[State_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State_Name"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[County_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="County_Name"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[AQI]"
+                      cachedDataType="i4"
+                      cachedName="AQI"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[AQI]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[Defining_Parameter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Defining_Parameter"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Defining_Parameter]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[Defining_Site]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Defining_Site"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Defining_Site]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[Number_of_Sites_Reporting]"
+                      cachedDataType="i4"
+                      cachedName="Number_of_Sites_Reporting"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Number_of_Sites_Reporting]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[Created]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Created"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[Last_Updated]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Last_Updated"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Last_Updated]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[State_Code]"
+                      cachedDataType="i4"
+                      cachedName="State_Code"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[State_Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[County_Code]"
+                      cachedDataType="i4"
+                      cachedName="County_Code"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[County_Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      dataType="i4"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      dataType="dbTimeStamp"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      dataType="dbTimeStamp"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      dataType="i4"
+                      name="Param_9">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      dataType="i4"
+                      name="Param_10">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      dataType="dbDate"
+                      name="Param_11">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Update Data In NDS.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Update Data In NDS.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Update Data In NDS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Data In NDS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Update Data In NDS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Update UpdateDate"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Update UpdateDate"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Update UpdateDate.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update UpdateDate.Inputs[Derived Column Input].Columns[Last_Updated]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Last_Updated"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output].Columns[Last_Updated]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Update UpdateDate.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Update UpdateDate.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Update UpdateDate.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Update UpdateDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update UpdateDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Update UpdateDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update UpdateDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Update UpdateDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Insert in NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Update UpdateDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
+              endId="Package\Data Flow Task\Update Data In NDS.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Lookup ID in NDS.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
+              endId="Package\Data Flow Task\Update UpdateDate.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\Data Flow Task\Lookup ID in NDS.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Lookup ID in NDS.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Load Stage.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="119.285716317138,57.3529419808239" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="131.2,41.6"
+          Id="Package\Data Flow Task\Load Stage"
+          TopLeft="148.571431101585,6.1176471446212" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Data Flow Task\Lookup ID in NDS"
+          TopLeft="108.571430420389,97.1176484208619" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="214.171431101585,47.7176471446212">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-24.4000006811959,49.4000012762407"
+              Start="0,0"
+              End="-24.4000006811959,41.9000012762407">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.7000006381204" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.7000006381204"
+                    Point2="0,24.7000006381204"
+                    Point3="-4,24.7000006381204" />
+                  <mssgle:LineSegment
+                    End="-20.4000006811959,24.7000006381204" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20.4000006811959,24.7000006381204"
+                    Point2="-24.4000006811959,24.7000006381204"
+                    Point3="-24.4000006811959,28.7000006381204" />
+                  <mssgle:LineSegment
+                    End="-24.4000006811959,41.9000012762407" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task\Update UpdateDate"
+          TopLeft="469.285722277602,149.517648785502" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Data Flow Task\Update Data In NDS"
+          TopLeft="46.4285722192453,234.717649879423" />
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\Data Flow Task\Insert in NDS"
+          TopLeft="477.857150995002,257.42353238251" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="551.771436636302,191.117648785502">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66.3058835970075"
+              Start="0,0"
+              End="0,58.8058835970075">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.8058835970075" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
+          TopLeft="189.771430420389,138.717648420862">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-56.1428582011438,96.0000014585606"
+              Start="0,0"
+              End="-56.1428582011438,88.5000014585606">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.0000007292803" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.0000007292803"
+                    Point2="0,48.0000007292803"
+                    Point3="-4,48.0000007292803" />
+                  <mssgle:LineSegment
+                    End="-52.1428582011438,48.0000007292803" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-52.1428582011438,48.0000007292803"
+                    Point2="-56.1428582011438,48.0000007292803"
+                    Point3="-56.1428582011438,52.0000007292803" />
+                  <mssgle:LineSegment
+                    End="-56.1428582011438,88.5000014585606" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-76.2628158193219,53.0000007292803,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
+          TopLeft="270.971430420389,117.917648420862">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="198.314291857213,52.4000003646402"
+              Start="0,0"
+              End="190.814291857213,52.4000003646402">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="95.1571459286066,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="95.1571459286066,0"
+                    Point2="99.1571459286066,0"
+                    Point3="99.1571459286066,4" />
+                  <mssgle:LineSegment
+                    End="99.1571459286066,48.4000003646402" />
+                  <mssgle:CubicBezierSegment
+                    Point1="99.1571459286066,48.4000003646402"
+                    Point2="99.1571459286066,52.4000003646402"
+                    Point3="103.157145928607,52.4000003646402" />
+                  <mssgle:LineSegment
+                    End="190.814291857213,52.4000003646402" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="43.3507592098566,-17.609375,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Load Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup ID in NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[NDS_AirQualityData]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Insert in NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
