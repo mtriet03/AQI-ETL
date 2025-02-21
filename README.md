@@ -5,8 +5,8 @@ This project was developed by the following members as part of the **Business In
 
 | Name              | Student ID  |
 |------------------|------------|
-| **Trần Minh Triết (Andy)** | 21120405    |
-| **Nguyễn Hoàng Ngọc Bảo**      |  21120394  |
+| **Nguyễn Hoàng Ngọc Bảo** | 21120394    |
+| **Trần Minh Triết**      |  21120405  |
 | **Nguyễn Đình Phương Đại**      | 21120424   |
 | **Nguyễn Quang Định**      | 21120433   |
 
