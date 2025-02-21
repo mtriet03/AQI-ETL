@@ -10,7 +10,7 @@ This project was developed by the following members as part of the **Business In
 | **Nguyễn Đình Phương Đại**      | 21120424   |
 | **Nguyễn Quang Định**      | 21120433   |
 
-Each member contributed to different aspects of the **ETL pipeline, data processing, and visualization** to ensure the project’s success. Feel free to contact us via our student emails at `<Student ID>'@student.hcmus.edu.vn`
+Each member contributed to different aspects of the **ETL pipeline, data processing, and visualization** to ensure the project’s success. Feel free to contact us via our student emails at `<Student ID>@student.hcmus.edu.vn`
 
 ## **AQI-ETL: Air Quality Data Processing Pipeline**
 
